@@ -23,3 +23,91 @@ flowchart TD
     C --> D[Análisis básico]
     D --> E[Clasificación reglas]
     E --> F[Visualización]
+
+
+
+flowchart TD
+    A[Frontend] --> B[API Gateway]
+
+    B --> C1[Servicio EEG]
+    B --> C2[Servicio ML]
+    B --> C3[Auth]
+
+    C1 --> D[(Storage EEG)]
+    C2 --> E[(Modelos ML)]
+    C3 --> F[(Usuarios DB)]
+
+
+
+flowchart TD
+    A[Upload EEG] --> B[API]
+    B --> C[(Storage)]
+    B --> D[Queue]
+
+    D --> E[Worker]
+    E --> F[Procesamiento]
+    F --> G[(Resultados)]
+
+    G --> H[Frontend]
+
+
+
+flowchart TD
+    A[EEG] --> B[Normalización]
+    B --> C[Segmentación]
+    C --> D[FFT]
+
+    D --> E1[Delta]
+    D --> E2[Theta]
+    D --> E3[Alpha]
+    D --> E4[Beta]
+
+    E1 --> F[Clasificación]
+    E2 --> F
+    E3 --> F
+    E4 --> F
+
+    F --> G[Fases]
+
+
+
+flowchart TD
+    A[Usuario] --> B[Frontend]
+    B --> C[Sube EEG]
+
+    C --> D[Backend]
+    D --> E[(Storage)]
+
+    D --> F[Queue]
+    F --> G[Worker]
+
+    G --> H[Procesamiento]
+    H --> I[Clasificación]
+
+    I --> J[(Resultados)]
+    J --> B
+
+
+
+flowchart LR
+    A[MVP] --> B[Backend]
+    B --> C[Servicios]
+    C --> D[Microservicios]
+
+flowchart TD
+    A[Usuario]
+    B[API]
+    C[(Storage)]
+    D[Queue]
+    E[Worker]
+    F[Procesamiento]
+    G[(Resultados)]
+    H[Frontend]
+
+    A --> B
+    B --> C
+    B --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
