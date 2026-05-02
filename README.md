@@ -23,9 +23,9 @@ flowchart TD
     C --> D[Análisis básico]
     D --> E[Clasificación reglas]
     E --> F[Visualización]
+```
 
-
-
+```mermaid
 flowchart TD
     A[Frontend] --> B[API Gateway]
 
@@ -36,9 +36,9 @@ flowchart TD
     C1 --> D[(Storage EEG)]
     C2 --> E[(Modelos ML)]
     C3 --> F[(Usuarios DB)]
+```
 
-
-
+```mermaid
 flowchart TD
     A[Upload EEG] --> B[API]
     B --> C[(Storage)]
@@ -49,9 +49,9 @@ flowchart TD
     F --> G[(Resultados)]
 
     G --> H[Frontend]
+```
 
-
-
+```mermaid
 flowchart TD
     A[EEG] --> B[Normalización]
     B --> C[Segmentación]
@@ -69,8 +69,8 @@ flowchart TD
 
     F --> G[Fases]
 
-
-
+```
+```mermaid
 flowchart TD
     A[Usuario] --> B[Frontend]
     B --> C[Sube EEG]
@@ -86,14 +86,15 @@ flowchart TD
 
     I --> J[(Resultados)]
     J --> B
+```
 
-
-
+```mermaid
 flowchart LR
     A[MVP] --> B[Backend]
     B --> C[Servicios]
     C --> D[Microservicios]
-
+```
+```mermaid
 flowchart TD
     A[Usuario]
     B[API]
